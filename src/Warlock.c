@@ -1,6 +1,1 @@
-
-
-
-int foo(void) {
-	return 4;
-}
+#include "Warlock.h"

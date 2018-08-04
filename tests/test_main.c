@@ -1,18 +1,16 @@
 #include <stdio.h>
 #include "unit_test_exec.h"
 
-#include "WarLock.h"
+#include "Warlock.h"
 
-// Main file for test suite
 
-int doo(void) {
-	return 1;
-}
 
 
 int main(int argc, char const *argv[])
 {
-	struct UnitTest dootest = {1, "doo test", &doo};
-	printf("The doo function test is %d\n", UnitTest_exec_one(&dootest));
+	struct Warlock_Str* foo = Warlock_Str_new(70);
+	Warlock_Str_write(foo, "hello", 5);
+	puts(foo->data);
+	Warlock_Str_del(foo);
 	return 0;
 }

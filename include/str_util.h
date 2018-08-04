@@ -4,6 +4,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <assert.h>
 
 
 /* String Utility for WarLock
@@ -16,8 +17,17 @@ struct Warlock_Str {
 	char* data;
 };
 
+// Initializes a new Str with specified capacity
 struct Warlock_Str* Warlock_Str_new(size_t capacity);
 
 inline size_t Warlock_Str_space(struct Warlock_Str* string);
+
+void Warlock_Str_reserve(struct Warlock_Str* string, size_t amount);
+
+void Warlock_Str_write(struct Warlock_Str* string,
+	                   const char* text,
+	                   size_t n);
+
+void Warlock_Str_del(struct Warlock_Str* string);
 
 #endif
