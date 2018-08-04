@@ -3,6 +3,6 @@
 
 #include "str_util.h"
 
-
+void Warlock_main(void);
 
 #endif
