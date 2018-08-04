@@ -2,16 +2,20 @@ cmake_minimum_required(VERSION 3.5)
 
 project(Warlock)
 
-####### Warlock Libraries ########
-
-add_library(WarlockShared SHARED 
+######Warlock core source files#######
+SET(core_files
     src/Warlock.c
     src/util/str_util.c
 )
 
+####### Warlock Libraries ########
+
+add_library(WarlockShared SHARED 
+    "${core_files}"
+)
+
 add_library(WarlockStatic STATIC 
-    src/Warlock.c
-    src/util/str_util.c
+    "${core_files}"
 )
 
 ###################################
