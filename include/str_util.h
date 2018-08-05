@@ -28,6 +28,8 @@ void Warlock_Str_write(struct Warlock_Str* string,
 	                   const char* text,
 	                   size_t n);
 
+int Warlock_Str_eq(struct Warlock_Str* s1, struct Warlock_Str* s2);
+
 void Warlock_Str_del(struct Warlock_Str* string);
 
 #endif

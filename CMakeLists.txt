@@ -32,8 +32,9 @@ target_include_directories(WarlockShared
 
 # Add test executables to build
 add_executable(WarlockTests
-    tests/unit_test_exec.c
     tests/test_main.c
+    tests/unit_test_exec.c
+    tests/test_str_util.c
 )
 
 target_include_directories(WarlockTests
